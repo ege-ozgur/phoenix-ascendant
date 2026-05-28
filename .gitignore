@@ -74,5 +74,14 @@ Plugins/**/Intermediate/*
 # Cache files for the editor to use
 DerivedDataCache/*
 
-# Content folder excluded - assets from Fab/Mixamo/Quixel
-Content/
+# Content folder - ignore everything inside by default
+Content/**
+
+# But INCLUDE our own work (Phoenix folder + ThirdPerson)
+!Content/Phoenix/
+!Content/Phoenix/**
+!Content/ThirdPerson/
+!Content/ThirdPerson/**
+
+# Still exclude built lighting data even in included folders
+Content/**/*_BuiltData.uasset
