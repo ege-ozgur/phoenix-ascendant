@@ -11,16 +11,20 @@ void UHealthComponent::BeginPlay()
 	CurrentHealth = MaxHealth; 
 }
 
-void UHealthComponent::ApplyDamage(float DamageAmount)
+void UHealthComponent::ApplyDamage(float DamageAmount, EPowerType DamageType)
 {
 	if (DamageAmount <= 0.0f || CurrentHealth <= 0.0f)
 	{
-		return; 
+		return;
 	}
 
-	CurrentHealth = FMath::Clamp(CurrentHealth - DamageAmount, 0.0f, MaxHealth);
+	// correct power double the damage, wrong power half the damage
+	float Multiplier = (DamageType == WeakAgainst) ? 2.0f : 0.5f;
+	float FinalDamage = DamageAmount * Multiplier;
 
-	UE_LOG(LogTemp, Warning, TEXT("Health: %f"), CurrentHealth);
+	CurrentHealth = FMath::Clamp(CurrentHealth - FinalDamage, 0.0f, MaxHealth);
+
+	UE_LOG(LogTemp, Warning, TEXT("Health: %f (took %f damage)"), CurrentHealth, FinalDamage);
 
 	if (CurrentHealth <= 0.0f)
 	{

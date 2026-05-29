@@ -6,6 +6,13 @@
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnHealthDeathSignature);
 
+UENUM(BlueprintType)
+enum class EPowerType : uint8
+{
+	Fire    UMETA(DisplayName = "Fire"),
+	Light   UMETA(DisplayName = "Light")
+};
+
 UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
 class PHOENIXASCENDANT_API UHealthComponent : public UActorComponent
 {
@@ -20,8 +27,11 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Health")
 	float CurrentHealth;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
+	EPowerType WeakAgainst = EPowerType::Light;
+
 	UFUNCTION(BlueprintCallable, Category = "Health")
-	void ApplyDamage(float DamageAmount);
+	void ApplyDamage(float DamageAmount, EPowerType DamageType);
 
 	UPROPERTY(BlueprintAssignable, Category = "Health")
 	FOnHealthDeathSignature OnDeath;
