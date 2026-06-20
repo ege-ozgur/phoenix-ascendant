@@ -39,6 +39,9 @@ public:
 	UFUNCTION(BlueprintPure, Category = "Health")
 	float GetHealthPercent() const;
 
+	UFUNCTION(BlueprintCallable, Category = "Health")
+	void Heal(float Amount);
+
 protected:
 	virtual void BeginPlay() override;
 };

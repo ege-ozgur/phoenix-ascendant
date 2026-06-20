@@ -13,8 +13,7 @@ void UHealthComponent::BeginPlay()
 
 void UHealthComponent::ApplyDamage(float DamageAmount, EPowerType DamageType)
 {
-	if (DamageAmount <= 0.0f || CurrentHealth <= 0.0f)
-	{
+	if (DamageAmount <= 0.0f || CurrentHealth <= 0.0f) {
 		return;
 	}
 
@@ -26,13 +25,18 @@ void UHealthComponent::ApplyDamage(float DamageAmount, EPowerType DamageType)
 
 	UE_LOG(LogTemp, Warning, TEXT("Health: %f (took %f damage)"), CurrentHealth, FinalDamage);
 
-	if (CurrentHealth <= 0.0f)
-	{
+	if (CurrentHealth <= 0.0f) {
 		OnDeath.Broadcast();
 	}
 }
 
-float UHealthComponent::GetHealthPercent() const
-{
+float UHealthComponent::GetHealthPercent() const{
 	return (MaxHealth > 0.0f) ? (CurrentHealth / MaxHealth) : 0.0f;
+}
+
+void UHealthComponent::Heal(float Amount){
+	if (Amount <= 0.0f || CurrentHealth <= 0.0f) {
+		return;
+	}
+	CurrentHealth = FMath::Clamp(CurrentHealth + Amount, 0.0f, MaxHealth);
 }
