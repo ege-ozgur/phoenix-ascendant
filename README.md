@@ -2,6 +2,8 @@
 
 **Phoenix Ascendant** is a third-person action game developed in **Unreal Engine 5.4.4** using a hybrid **C++ and Blueprint** architecture. The player controls Phoenix and switches between fire and light attacks to exploit enemy weaknesses, survive enemy waves, activate ancient altars, and restore the ruined crypt.
 
+## Submission Downloads The packaged Windows build and full Unreal Engine project are hosted externally because they exceed the submission platform's 950 MB upload limit. - **Packaged Windows Build:** [Download from Google Drive](https://drive.google.com/file/d/1ZpzNO_szo1owwnqFMJ36stp-pVL39FWH/view?usp=sharing) - **Full Unreal Engine Project:** SOURCE_LINK - **GitHub Repository:** https://github.com/ege-ozgur/phoenix-ascendant
+
 ## Project Overview
 
 The game contains two playable levels and a complete gameplay flow:
