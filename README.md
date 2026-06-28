@@ -8,7 +8,6 @@ The packaged Windows build and the full Unreal Engine project are hosted externa
 
 - **Packaged Windows Build:** [Download from Google Drive](https://drive.google.com/file/d/1ZpzNO_szo1owwnqFMJ36stp-pVL39FWH/view?usp=sharing)
 - **Full Unreal Engine Project:** [Download from Google Drive](PASTE_PROJECT_DRIVE_LINK_HERE)
-- **Source Code (GitHub):** https://github.com/ege-ozgur/phoenix-ascendant
 ## Project Overview
 
 The game contains two playable levels and a complete gameplay flow:
