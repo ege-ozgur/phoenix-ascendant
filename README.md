@@ -90,8 +90,8 @@ When Unreal Engine reports stale or incompatible binaries, close the editor, del
 |---|---|
 | `W`, `A`, `S`, `D` | Move |
 | Mouse | Look / Aim |
-| Left Mouse Button | Fire attack |
-| Right Mouse Button | Light attack |
+| Left Mouse Button | Light attack |
+| Right Mouse Button | Fire attack |
 | `R` | Heal |
 | `Space` | Jump |
 | `Esc` | Pause / Resume |
