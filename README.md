@@ -7,7 +7,7 @@
 The packaged Windows build and the full Unreal Engine project are hosted externally because they exceed the submission platform's 950 MB upload limit.
 
 - **Packaged Windows Build:** [Download from Google Drive](https://drive.google.com/file/d/1ZpzNO_szo1owwnqFMJ36stp-pVL39FWH/view?usp=sharing)
-- **Full Unreal Engine Project:** [Download from Google Drive](PASTE_PROJECT_DRIVE_LINK_HERE)
+- **Full Unreal Engine Project:** [Download from Google Drive](https://drive.google.com/file/d/1C3n1eW9d-XLHF_t_BlxCW2PCQlYuBCXg/view?usp=sharing)
 - **Source Code (GitHub):** https://github.com/ege-ozgur/phoenix-ascendant
 ## Project Overview
 
